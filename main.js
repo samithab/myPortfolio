@@ -1,4 +1,5 @@
 
+
 /*-------- navigation menu --------- */
 
 (() => {
@@ -68,7 +69,12 @@ document.addEventListener('click', (Event) =>{
             }
         })
 
+        
+
        }
+
+       window.location.hash=hash;
+
 
         
     }
@@ -170,3 +176,15 @@ document.addEventListener('click', (Event) =>{
 
 
 })();
+
+
+window.addEventListener('load', () =>{
+
+document.querySelector('.loader-bg').classList.add('fade-out');
+
+setTimeout(() => {
+
+    document.querySelector('.loader-bg').style.display='none';
+    
+}, 600);
+})
